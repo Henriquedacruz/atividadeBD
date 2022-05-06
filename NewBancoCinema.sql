@@ -1,4 +1,4 @@
- #drop database atividade;
+#drop database atividade;
 create database atividade;
 
 use atividade;
@@ -138,3 +138,20 @@ update tbl_ator set sexo = 'M' where id_ator = 24;
 
 #Clausula between  permite retornar intervalos de dados especificados em um filtro
 #select * from tbl_filme where duracao < '170' and ano_lancamento between '2000' and '2015';
+
+
+#exibir o total de duração dos filmes
+
+#select sum(duracao) from tbl_filme;
+
+select sum(duracao) total_minutos from tbl_filme;
+
+#media
+select avg(duracao) from tbl_filme where ano_lancamento > 2000;
+
+select sum(duracao) total_minutos,  avg(duracao) ano_lancamento from tbl_filme;
+
+select min(duracao) from tbl_filme;
+
+select min(nome_ator) from tbl_ator;
+
